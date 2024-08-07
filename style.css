@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    color: #fff;
+    background: #0E0D23;
+}
+
+/*Generales*/
+h1,h2{
+    line-height: 2;
+}
+
+h1,h2,h3,h4,h5,p{
+    font-family: 'Karla', sans-serif;
+}
+
+ul{
+    padding-left: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration:none;
+    color: white;
+}
+
+/* Navbar */
+.nav-container{
+    padding: 1rem;
+    position: sticky;
+}
+
+.logo{
+    margin-left: 3rem;
+}
+
+.logo img:nth-child(1){
+    width: 5rem;
+}
+
+.logo img:nth-child(2){
+    width: 10rem;
+}
+
+.social-media-icons{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-right: 3rem;
+}
+
+.social-media-icons i{
+    font-size: 32px;
+    color: #fafafa;
+}
+
+/* Introduction */
+
+.self-introduction{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    animation: zoomIn 1s ease-out forwards;
+}
+
+.self-introduction-image img{
+    max-width: 300px;
+    border-radius: 50%;
+}
+
+.self-introduction h1{
+    background: linear-gradient(45deg, #4b8375, #4679af);
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+.self-introduction p, .self-introduction h1, .self-introduction h2, .self-introduction h3{
+    font-family: "Monserrat", sans-serif; 
+}
+
+.self-introduction h3{
+    line-height: 3;
+}
+
+.self-introduction p{
+    font-weight: 600;
+}
+
+.self-introduction-title{
+    width: 40%;
+}
+
+hr{
+    background-color: #fafafa;
+    height: 25rem;
+    width: 3px;
+    margin: 0;
+}
+
+/*About me*/
+
+.information{
+/* background: linear-gradient(90deg, rgba(12,22,48,1) 37%, rgba(28, 25, 69, 0) 64%); */
+   background:linear-gradient(90deg, #3F9DBF34,#0E0D23);
+}
+
+.about-me {
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: fadeRight 1s forwards;
+}
+
+.education{
+    margin-top: 3rem;
+}
+
+.education-info, .tech-stacks{
+    margin-right: 50px;
+}
+
+.education-info li{
+    font-weight: 600;
+}
+
+.education-info p{
+    font-style: italic;
+}
+
+.link-button{
+    transition: all 0.2s ease-in-out;
+    padding: 0.7rem 1.7rem;
+    background-color: #0E0D23;
+    border: 2px solid #3F9DBF34;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+}
+
+/*Projects*/
+.project{
+    padding: 1rem;
+    background-color:#3F9DBF34;
+    color: white;
+}
+
+.project-card{
+    position: relative;
+}
+
+.overlay {
+    transition: all 0.2s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.project-card:hover img {
+    opacity: 0.2;
+}
+
+.project-card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.overlay i {
+    color: black;
+    font-size: 60px;
+    margin: 10px;
+}
+
+.card-body{
+    padding: 1rem .5rem .5rem .5rem;
+}
+
+.card-text-title{
+    display: none;
+    text-align: center;
+}
+
+.card-text-links a{
+    width: 100%;
+    color: #fafafa;
+    font-size: small;
+}
+
+.card-text-links a:hover{
+    font-weight: bolder;
+}
+
+
+/*footer*/
+
+.get-in-touch{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-container{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.form-container form{
+    width: 20rem;
+    padding: 1rem;
+    background-color: #0E0D23;
+    border-radius: 15px;
+}
+
+.form-container form label{
+    font-family: 'Karla', sans-serif;
+    margin-bottom: 5px;
+}
+
+.form-container form input,
+.form-container form textarea{
+    background-color: #3F9DBF34;
+    border: none;
+    font-family: 'Karla', sans-serif;
+    color: #f3f3f3;
+    
+}
+
+textarea{
+    resize: none;
+    height:150px;
+}
+
+.form-container form button{
+    margin-top: 1rem;
+    background-color: #0E0D23;
+    border: 2px solid #3F9DBF34;
+    font-family: 'Karla',sans-serif;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+input::placeholder, textarea::placeholder {
+    font-style: italic; 
+}
+
+.form-container form button:hover, .link-button:hover{
+    border: 2px solid #3F9DBF34;
+    background-color: #3F9DBF34;
+}
+
+@keyframes fadeRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+
+/**Media queries**/
+@media screen and (max-width:767px) {
+
+    .logo img:nth-child(2){
+        display: none;
+    }
+    .self-introduction{
+        flex-direction: column;
+    }
+    .self-introduction-title{
+        margin-top: 2rem;
+        width: 80%;
+    }
+
+    hr{
+        display: none;
+    }
+    .education{
+        flex-direction: column;
+    }
+    .info-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+@media screen and (min-width:700px) {
+    .self-introduction-image img{
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width:464px) {
+    .logo{
+        margin-left: 0;
+    }
+    .social-media-icons{
+        margin-top: 1rem;
+        margin-right: 0;
+    }
+    ul{
+        padding-left: 0;
+    }
+    .nav-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+    }
+    .overlay{
+        display: none;
+    }
+    .project-card:hover img {
+        opacity: 1;
+    }
+    .card-text-title{
+        display: block;
+    }
+}
+
