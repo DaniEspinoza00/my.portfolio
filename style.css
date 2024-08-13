@@ -123,8 +123,8 @@ hr{
     margin-top: 3rem;
 }
 
-.education-info, .tech-stacks{
-    margin-right: 50px;
+.education-info, .tech-stacks, .curriculum{
+    margin: 0px 50px 50px 0px;
 }
 
 .education-info li{
