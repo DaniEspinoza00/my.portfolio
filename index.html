@@ -22,6 +22,7 @@
         <ul class="social-media-icons ">
             <li><a href="https://github.com/DaniEspinoza00" target="_blank"><i class="bi bi-github"></i></a></li>
             <li><a href="https://www.linkedin.com/in/daniespinoza00/" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+            <li><a class="language" href="" ><span id="language">EN <img style="width: 20px;" src="./images/flag-for-flag-united-kingdom-svgrepo-com.svg" alt=""></span></a></li>
         </ul>
     </nav>
     <!-- presentacion -->
@@ -31,11 +32,11 @@
         </div>
         <hr>
         <div class="self-introduction-title">
-            <h3>Hello, I'm Daniel!</h3>
-            <h1>Web Developer</h1>
+            <h3 id="title">Hello, I'm Daniel!</h3>
+            <h1 id="career">Web Developer</h1>
             <div>
-                <p>Thanks for take a moment to look at my portfolio.</p>
-                <p> My name is Daniel Espinoza, a recent graduated in <span>University Technician in Programming</span>
+                <p id="subtitle">Thanks for take a moment to look at my portfolio.</p>
+                <p id="subtitle-name"> My name is Daniel Espinoza, a recent graduated in University Technician in Programming
                     at Universidad Tecnologica Nacional (UTN - Mar del Plata).<!--  <br>
                     Actually I'm looking for my first job to apply everthing I learnt in my path for the university
                     and what I learnt for myself</p> -->
@@ -46,23 +47,23 @@
     <div class="information">
         <section class="container about-me py-5">
             <div class="container">
-                <h2>About Me</h2>
-                <p>I finished my studies last year and I'm looking for my first job to apply everthing I learnt in my
-                    path
-                    for the university <br>
-                    and what I learnt for myself. My strongest skills are Typescript and Java, I also create projects in
-                    Angular. <br>
-                    I'm constantly expanding my knowledges with new technologies and tools.</p>
-                
+                <h2 id="about-me">About Me</h2>
+                <p id="about-me-resume">During the pandemic, and after having a 10-year career as a construction professional as Senior Master of Works. 
+                    I wanted to take another direction in my life, and I started studying Programming, which was always something that I was interested in learning.
+                    <br>Thus, in 2020 I entered the University to face this very rewarding challenge in which I learned many technologies (C, Java, Typescript, Angular) 
+                    <br>as well as soft skills since I was able to improve my teamwork and the way I work with colleagues.
+                </p>
+
+
                 <!-- poner algo de que quiero aprender -->
                 <div class="education d-flex">
                     <div class="education-info">
-                        <h5>Education:</h5>
-                        <li>University Technician in Programming</li>
+                        <h5 id="education-title">Education:</h5>
+                        <li id="career-name">University Technician in Programming</li>
                         <p>Universidad Tecnologica Nacional (UTN - Mar del Plata)</p>
                     </div>
                     <div class="tech-stacks">
-                        <h5>Tech Stacks</h5>
+                        <h5 id="tech-stacks-title">Tech Stacks</h5>
                         <div class="d-flex flex-wrap">
                             <svg x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
                                 <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
@@ -196,9 +197,9 @@
                         </div>
                     </div>
                     <div class="curriculum">
-                        <h5>My CV</h5>
-                        <p>This is my complete CV, feel free to contact me.</p>
-                        <a class="link-button" href="https://drive.google.com/file/d/10kG9cjqXQMFtS-pC0b7-nQLM8ZPL3m8S/view?usp=sharing" target="_blank">My Curriculum</a>
+                        <h5 id="cv">My CV</h5>
+                        <p id="cv-resume">This is my complete CV, feel free to contact me.</p>
+                        <a class="link-button" id="cv-button" href="https://drive.google.com/file/d/10kG9cjqXQMFtS-pC0b7-nQLM8ZPL3m8S/view?usp=sharing" target="_blank">My Curriculum</a>
                     </div>
                 </div>
             </div>
@@ -207,7 +208,7 @@
     </div>
     <!-- projects -->
     <section class=" container d-flex flex-column justify-content-center align-items-center mt-5 mb-5">
-        <h1 style="text-align: center; font-weight: 600;">MY PROJECTS</h1>
+        <h1 id="my-projects" style="text-align: center; font-weight: 600;">MY PROJECTS</h1>
         <div class="project card" style="width: 18rem; margin: 1rem;">
             <div class="project-card">
                 <img src="./images/aries-bg-nav.png" class="card-img-top" alt="...">
@@ -221,9 +222,10 @@
             </div>
             <div class="card-body">
                 <a href=""><h3 class="card-text-title">Aries Bookshop</h3></a>
-                <p class="card-text">A bookshop project using a public book API. <br>
-                    Angular and Boostrap is used for the frontend. <br>
-                    And Springboot connected to a MySQL database for the backend. <br>
+                <p id="card-text" class="card-text">
+                    Aries Bookshop is a book store which uses a public API to get the list of books.<br>
+                    Is designed in Angular 17 and Bootstrap for the frontend.<br>
+                    Backend is designed with Java and Springboot connected to a MySQL database to manage stock and prices and user registration.
                 </p>
                 <div class="card-text-links d-flex flex-column justify-content-center align-items-center mb-0"><!-- BOTONES -->
                     <a class="link-button" href="https://github.com/DaniEspinoza00/AriesBookshop" target="_blank">Github Frontend (Angular)</a>
@@ -236,7 +238,7 @@
     <footer class="information">
         <div class="info-container container d-flex justify-content-evenly">
             <div class="get-in-touch">
-                <h2>Get in touch</h2>
+                <h2 id="get-in-touch">Get in touch</h2>
                 <p>jorgedanielespinoza00@gmail.com</p>
                 <p>Mar del Plata - Buenos Aires - Argentina</p>
                 <ul class="social-media-icons">
@@ -246,18 +248,19 @@
             </div>
             <div class="form-container">
                 <form name="contact-form" netlify class="d-flex flex-column">
-                    <label for="">Name</label>
+                    <label id="contact-name" for="">Name</label>
                     <input type="text" name="name" placeholder="Your name">
-                    <label for="">Email</label>
+                    <label id="contact-email" for="">Email</label>
                     <input type="text" name="email" placeholder="Email">
-                    <label for="">Message</label>
+                    <label id="contact-message" for="">Message</label>
                     <textarea name="message" id="" placeholder="Your message"></textarea>
-                    <button type="submit" class="btn btn-primary">Send </button>
+                    <button id="contact-send" type="submit" class="btn btn-primary">Send </button>
                 </form>
             </div>
         </div>
     </footer>
 
+    <script src="./portfolio.js/home.js"></script>
 </body>
 
 </html>
