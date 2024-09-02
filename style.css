@@ -294,7 +294,7 @@ input::placeholder, textarea::placeholder {
 
 /**Media queries**/
 @media screen and (max-width:767px) {
-
+    
     .logo img:nth-child(2){
         display: none;
     }
@@ -315,6 +315,10 @@ input::placeholder, textarea::placeholder {
     .info-container{
         flex-direction: column;
         align-items: center;
+    }
+
+    .card-project-container{
+        flex-direction: column;
     }
     
 }

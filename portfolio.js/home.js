@@ -1,5 +1,3 @@
-
-
 const traduccion = {
     "es": {
         "title": "Hola, soy Daniel!",
@@ -14,8 +12,10 @@ const traduccion = {
         "cv":"Mi CV",
         "cv-resume":"Este es mi curriculum completo, sientase libre en contactarme.",
         "cv-button":"Mi Curriculum",
+        "cv-button-link":"https://drive.google.com/file/d/10kG9cjqXQMFtS-pC0b7-nQLM8ZPL3m8S/view?usp=sharing",
         "my-projects":"MIS PROYECTOS",
         "card-text":"Aries Bookshop es una tienda de libros la cual utiliza una API publica para obtener el listado de libros.<br>Está diseñado en Angular 17 y Bootstrap para el frontend.<br>El backend esta diseñado con Java y Springboot conectado a una base de datos MySQL para manejar el stock y los precios y el registro de usuarios.",
+        "card-text-2":"(En proceso...)<br>Sistema de control de Aries Bookshop para crear, leer, modificar y borrar (CRUD) stock, contactos de proveedores y ventas con filtros y paginación<br>este proyecto es creado usando Angular 17 y Angular Material para el frontend, Java y Springboot para el backend<br>y MySQL como base de datos relacional-",
         "get-in-touch":"Ponte en contacto",
         "contact-name":"Nombre",
         "contact-message":"Mensaje",
@@ -34,8 +34,10 @@ const traduccion = {
         "cv":"My CV",
         "cv-resume":"This is my complete CV, feel free to contact me.",
         "cv-button":"My Curriculum",
+        "cv-button-link":"https://drive.google.com/file/d/1UjuMF6HZyCtnf-iH-Xn03VlvnRpEtNsD/view?usp=drive_link",
         "my-projects":"MY PROJECTS",
         "card-text":"Aries Bookshop is a book store which uses a public API to get the list of books.<br>Is designed in Angular 17 and Bootstrap for the frontend.<br>The backend is designed with Java and Springboot connected to a MySQL database to manage stock and prices and user registration.",
+        "card-text-2":"(In process...)<br>A managment system for Aries Bookshop to CRUD stock, suppliers contact and sales with filters and pagination<br>this project is created using Angular 17, Angular Material for the frontend, Java and Springboot for the Backend<br>and MySQL as relational database.",
         "get-in-touch":"Get in touch",
         "contact-name":"Name",
         "contact-message":"Message",
@@ -48,28 +50,20 @@ const idioma = document.getElementById('language');
 function actualizarIdioma(nuevoIdioma) {
     const bandera = idioma.querySelector('img');
     
-    document.getElementById('title').textContent = traduccion[nuevoIdioma]["title"];
-    document.getElementById('career').textContent = traduccion[nuevoIdioma]["career"];
-    document.getElementById('subtitle').textContent = traduccion[nuevoIdioma]["subtitle"];
-    document.getElementById('subtitle-name').textContent = traduccion[nuevoIdioma]["subtitle-name"];
-    
-    document.getElementById('about-me').textContent = traduccion[nuevoIdioma]["about-me"];
-    document.getElementById('about-me-resume').innerHTML = traduccion[nuevoIdioma]["about-me-resume"];
-    document.getElementById('education-title').textContent = traduccion[nuevoIdioma]["education-title"];
-    document.getElementById('career-name').textContent = traduccion[nuevoIdioma]["career-name"];
-    document.getElementById('tech-stacks-title').textContent = traduccion[nuevoIdioma]["tech-stacks-title"];
-    document.getElementById('cv').textContent = traduccion[nuevoIdioma]["cv"];
-    document.getElementById('cv-resume').textContent = traduccion[nuevoIdioma]["cv-resume"];
-    document.getElementById('cv-button').textContent = traduccion[nuevoIdioma]["cv-button"];
+    Object.keys(traduccion[nuevoIdioma]).forEach(id => {
+        const elemento = document.getElementById(id);
+        if (elemento) {
+            if (elemento.tagName === 'A') {
+                elemento.textContent = traduccion[nuevoIdioma][id];
+                elemento.href = traduccion[nuevoIdioma]["cv-button-link"];
+            } else if (elemento.tagName === 'DIV' || elemento.tagName === 'P') {
+                elemento.innerHTML = traduccion[nuevoIdioma][id];
+            } else {
+                elemento.textContent = traduccion[nuevoIdioma][id];
+            }
+        }
+    });
 
-    document.getElementById('my-projects').textContent = traduccion[nuevoIdioma]["my-projects"];
-    document.getElementById('card-text').innerHTML = traduccion[nuevoIdioma]["card-text"];
-
-    document.getElementById('get-in-touch').textContent = traduccion[nuevoIdioma]["get-in-touch"];
-    document.getElementById('contact-name').textContent = traduccion[nuevoIdioma]["contact-name"];
-    document.getElementById('contact-message').textContent = traduccion[nuevoIdioma]["contact-message"];
-    document.getElementById('contact-send').textContent = traduccion[nuevoIdioma]["contact-send"];
-    
     idioma.textContent = nuevoIdioma.includes('en') ? 'EN ' : 'ES ';
 
     bandera.src = nuevoIdioma.includes('en') 
